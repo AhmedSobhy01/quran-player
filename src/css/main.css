@@ -1,0 +1,74 @@
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+/* Readers - Playlists */
+.main-frame {
+  height: 80%;
+}
+.readers-list {
+  z-index: 2;
+}
+.readers-list,
+.audio-playlist {
+  background: #004d40;
+  width: 100%;
+  height: 80%;
+  overflow-y: scroll;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.5s ease-in-out;
+}
+.reader-elm,
+.audio-elm {
+  padding: 2rem 0;
+}
+.reader-elm:not(:last-child),
+.audio-elm:not(:last-child) {
+  border-bottom: 2px solid #ccc;
+}
+.left {
+  transform: translateX(200%);
+}
+.active {
+  color: #21cd2e !important;
+}
+
+/* Player */
+.player-controller__container {
+  height: 20%;
+  background: #282828;
+}
+.player-controller__controls-actions {
+  margin-bottom: 10px;
+}
+.player-controller__controls-timeline {
+  width: 90%;
+}
+.player-controller__timeline {
+  width: 85%;
+  height: 6px;
+  background-color: #ccc;
+}
+.player-controller__timeline .player-controller__timeline-progress {
+  width: 0%;
+  height: 100%;
+  background-color: #546e7a;
+  position: relative;
+  transition: 0.3s linear;
+}
+.player-controller__timeline .player-controller__timeline-progress::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #546e7a;
+  border-radius: 50%;
+  top: -75%;
+  right: 0;
+  position: absolute;
+  cursor: pointer;
+}
+.player-controller__controls-volume {
+  cursor: pointer;
+}
